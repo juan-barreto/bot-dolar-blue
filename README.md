@@ -10,10 +10,13 @@ Consulta el precio del dólar blue,oficial,cripto y tarjeta en tiempo real y lo 
 - python-telegram-bot
 
 ## Comandos disponibles
-- `/dolar` → devuelve el precio actual del blue
+- `/blue` → devuelve el precio actual del blue
 - `/oficial` → devuelve el precio actual del oficial
 - `/cripto` → devuelve el precio actual del cripto
 - `/tarjeta` → devuelve el precio actual del tarjeta
+
+## Deploy
+- Railway para uso del bot 24/7
 
 ## Autor
 Juan Barreto
