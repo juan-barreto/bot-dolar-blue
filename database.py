@@ -1,5 +1,5 @@
 import sqlite3
-from dolar import obtener_dolar_blue
+from dolar import *
 from datetime import datetime
 
 
@@ -16,7 +16,8 @@ def creacion_tabla():
             CREATE TABLE IF NOT EXISTS cotizaciones (
                id INTEGER PRIMARY KEY AUTOINCREMENT,
                fuente TEXT,
-               precio REAL,
+               venta REAL,
+               compra REAL,
                fecha TEXT
                
                
@@ -24,13 +25,13 @@ def creacion_tabla():
     """)
     conexion.commit()
 
-def guardar_cotizacion():
+def guardar_cotizacion(fuente,venta,compra):
     fecha = datetime.now().isoformat()
-    venta_blue = obtener_dolar_blue()
+
     cursor.execute("""
-               INSERT INTO cotizaciones (fuente, precio, fecha)
-               VALUES (?, ?, ?)
-               """, ("Blue",  venta_blue , fecha))
+               INSERT INTO cotizaciones (fuente, venta, compra, fecha)
+               VALUES (?, ?, ?, ?)
+               """, (fuente, venta, compra, fecha))
 
     conexion.commit()
 
@@ -44,5 +45,4 @@ def mostrar_cotizacion():
 
 if __name__ == "__main__":
     creacion_tabla()
-    guardar_cotizacion()
     mostrar_cotizacion()
