@@ -2,3 +2,4 @@ dolar.db
 bot.py
 __pycache__/
 *.pyc
+.env
