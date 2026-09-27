@@ -1,4 +1,4 @@
-# Bot Dólar 🤖
+# Bot Dólar 
 
 ## ¿Qué hace?
 Consulta el precio del dólar blue,oficial,cripto y tarjeta en tiempo real y lo guarda en una base de datos local.
